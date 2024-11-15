@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico de Precios del Dólar</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Gráfico de Precios del Dólar</h1>
+    <div class="filter-container">
+        <h2>Selecciona los Meses a Mostrar</h2>
+        <div id="month-filter">
+            <label><input type="checkbox" id="select-all" checked> Seleccionar Todo</label>
+            <label><input type="checkbox" value="Ene" checked> Ene</label>
+            <label><input type="checkbox" value="Feb" checked> Feb</label>
+            <label><input type="checkbox" value="Mar" checked> Mar</label>
+            <label><input type="checkbox" value="Abr" checked> Abr</label>
+            <label><input type="checkbox" value="May" checked> May</label>
+            <label><input type="checkbox" value="Jun" checked> Jun</label>
+            <label><input type="checkbox" value="Jul" checked> Jul</label>
+            <label><input type="checkbox" value="Ago" checked> Ago</label>
+            <label><input type="checkbox" value="Sep" checked> Sep</label>
+            <label><input type="checkbox" value="Oct" checked> Oct</label>
+        </div>
+    </div>
+    <div class="container">
+        <div class="chart-container">
+            <canvas id="dolarChart"></canvas>
+        </div>
+        <div class="info-container">
+            <div class="annual-increase">
+                <h2><span class="icon">📈</span> % de Aumento del Dólar (Enero a Octubre)</h2>
+                <ul id="aumento-anual"></ul>
+            </div>
+            <div class="monthly-increase">
+                <h2><span class="icon">📉</span> % de Aumento del Dólar (Último Mes)</h2>
+                <ul id="aumento-mensual"></ul>
+            </div>
+        </div>
+    </div>
+    <div class="average-increase">
+        <h2>Promedio de Crecimiento Mensual en 2024</h2>
+        <ul id="promedio-crecimiento"></ul>
+    </div>
+    
+    <!-- Nueva caja de conversión -->
+    <div class="conversion-container">
+        <h2>Convertir entre Pesos y Tipo de Dólar</h2>
+
+        <!-- Selección de dirección de conversión -->
+        <label>
+            <input type="radio" name="conversion-direction" value="pesos-a-dolares" checked> Pesos a Dólares
+        </label>
+        <label>
+            <input type="radio" name="conversion-direction" value="dolares-a-pesos"> Dólares a Pesos
+        </label>
+
+        <!-- Entrada para el monto -->
+        <label for="monto">Monto:</label>
+        <input type="number" id="monto" placeholder="Ingrese el monto">
+
+        <!-- Selección de tipo de dólar -->
+        <label for="tipo-dolar">Tipo de Dólar:</label>
+        <select id="tipo-dolar">
+            <option value="Dólar Oficial">Dólar Oficial</option>
+            <option value="Dólar Mep">Dólar Mep</option>
+            <option value="Dólar CCL">Dólar CCL</option>
+            <option value="Dólar Tarjeta">Dólar Tarjeta</option>
+            <option value="Dólar Blue">Dólar Blue</option>
+        </select>
+
+        <!-- Botón para realizar la conversión -->
+        <button onclick="convertir()">Convertir</button>
+
+        <!-- Resultado de la conversión -->
+        <div id="resultado-conversion"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

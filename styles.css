@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #444;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.filter-container, .conversion-container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.chart-container {
+    width: 60%;
+    max-width: 800px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: relative;
+}
+
+.info-container {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.annual-increase, .monthly-increase, .average-increase, .conversion-container {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.annual-increase h2, .monthly-increase h2, .average-increase h2, .conversion-container h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.icon {
+    margin-right: 8px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 16px;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+input[type="number"], select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#resultado-conversion {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
